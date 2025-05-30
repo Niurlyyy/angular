@@ -1,0 +1,13 @@
+<p>contacto works!</p>
+<h4>{{titulo}}</h4>
+<ul class="list-unstyled">
+    @for(medio of medios; track medio) {
+        <li>
+            <a [href]="medio.enlace" target="_blank">
+                <i class="fa fa-{{medio.icono}}"></i> {{medio.texto}}
+            </a>
+        </li>
+    } @empty {
+        Empty list of media
+    }
+</ul>
